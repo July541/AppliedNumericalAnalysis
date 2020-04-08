@@ -39,7 +39,7 @@ function gauss_elimination_column_pivot(X::Array, b::Array)
     for i in 1:row_num-1
         target = map(item -> abs(item), A[i:end, i])
         max_val = maximum(target)
-        if small_enough(max_val )
+        if small_enough(max_val)
             error("Can not elimination")
         end
 
