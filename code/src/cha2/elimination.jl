@@ -32,7 +32,6 @@ function gauss_elimination(X::Array, b::Array)
     return b
 end
 
-
 function gauss_elimination_column_pivot(X::Array, b::Array)
     A = hcat(X, b)
     row_num = size(A, 1)
