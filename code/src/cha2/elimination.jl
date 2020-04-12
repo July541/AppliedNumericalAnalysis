@@ -61,11 +61,9 @@ function gauss_elimination_column_pivot(X::Array, b::Array)
         b[i] -= sum(A[i,i+1:end-1] .* b[i+1:end])
         b[i] /= pivot
     end
-
-    print(b)
     return b
 end
 
-x = [1. 2. 3.; 2 7 5; 1 4 9]
-b = [1; 6; -3.]
-gauss_elimination(x, b)
+# x = [1. 2. 3.; 2 7 5; 1 4 9]
+# b = [1; 6; -3.]
+# gauss_elimination(x, b)

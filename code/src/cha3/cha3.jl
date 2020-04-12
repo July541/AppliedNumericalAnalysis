@@ -66,6 +66,7 @@ function steepest_descent_method(X::Array, Y::Array, epsilon::Float64=1e-8, N::I
         end
         x_0 = y
     end
+    error("maximum iteration reached")
 end
 
 function conjugate_gradient_method(X::Array, Y::Array, epsilon::Float64=1e-8, N::Int=10^5)
@@ -84,9 +85,9 @@ function conjugate_gradient_method(X::Array, Y::Array, epsilon::Float64=1e-8, N:
         end
         x_0 = x_1
     end
-    error("error2")
+    error("maximum iteration reached")
 end
 
-arr = [[8,4,6.0] [-3, 11, 3] [2, -1, 12]]
-y = [20, 33, 36.0]
-print(conjugate_gradient_method(arr, y))
+# arr = [[8,4,6.0] [-3, 11, 3] [2, -1, 12]]
+# y = [20, 33, 36.0]
+# print(conjugate_gradient_method(arr, y))
