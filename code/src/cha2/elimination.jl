@@ -3,7 +3,7 @@ function small_enough(v::Number, epsilon=1e-8)
 end
 
 function gauss_elimination(X::Array, b::Array)
-    A = hcat(x, b)
+    A = hcat(X, b)
     row_num = size(A, 1)
 
     # elimination
